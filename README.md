@@ -19,7 +19,7 @@ Este repositório contém um glossário técnico para consulta rápida das princ
 ### JavaScript
 - Funções e métodos básicos
 - Manipulação de DOM
-- Conceitos fundamentais (variáveis, eventos, etc.)
+- Conceitos fundamentais (variáveis, eventos, etc...)
 
 ---
 
