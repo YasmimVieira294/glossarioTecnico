@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossário Técnico - HTML & CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Glossário Técnico</h1>
+        <p>O HTML é a linguagem usada para estruturar o conteúdo de páginas da web. Ele define elementos como títulos, parágrafos, links, imagens e tabelas, permitindo organizar as informações de forma lógica e semântica.
+
+O CSS  é a linguagem responsável pela aparência visual do conteúdo criado com HTML. Ele controla cores, fontes, tamanhos, espaçamentos, posicionamento e efeitos, possibilitando transformar uma página simples em um layout atraente e responsivo.
+
+</p>
+    </header>
+
+    <main>
+        <section class="tabs">
+            <button class="tab-btn active" data-tab="html">Tags HTML</button>
+            <button class="tab-btn" data-tab="css">Propriedades CSS</button>
+        </section>
+
+        <section id="html" class="tab-content active">
+            <h2>Tags HTML</h2>
+            <ul>
+                <li>
+                    <strong>&lt;div&gt;</strong> - Container genérico para conteúdo.
+                    <pre><code>&lt;div&gt;Conteúdo&lt;/div&gt;</code></pre>
+                    <em>Dica: Use para agrupar elementos e aplicar estilos.</em>
+                </li>
+                <li>
+                    <strong>&lt;img&gt;</strong> - Exibe uma imagem.
+                    <pre><code>&lt;img src="imagem.jpg" alt="Descrição"&gt;</code></pre>
+                </li>
+                <li>
+                    <strong>&lt;section&gt;</strong> - Agrupa conteúdo relacionado.
+                    <pre><code>&lt;section&gt;Conteúdo&lt;/section&gt;</code></pre>
+                </li>
+                <li>
+                    <strong>&lt;header&gt;</strong> - Cabeçalho da página ou seção.
+                </li>
+                <li>
+                    <strong>&lt;footer&gt;</strong> - Rodapé da página ou seção.
+                </li>
+                <li>
+                    <strong>&lt;nav&gt;</strong> - Menu de navegação.
+                </li>
+                <li>
+                    <strong>&lt;ul&gt;</strong> - Lista não ordenada.
+                </li>
+                <li>
+                    <strong>&lt;ol&gt;</strong> - Lista ordenada.
+                </li>
+                <li>
+                    <strong>&lt;li&gt;</strong> - Item de lista.
+                </li>
+                <li>
+                    <strong>&lt;form&gt;</strong> - Formulário para entrada de dados.
+                </li>
+            </ul>
+        </section>
+
+        <section id="css" class="tab-content">
+            <h2>Propriedades CSS</h2>
+            <ul>
+                <li>
+                    <strong>color</strong> - Define a cor do texto.
+                    <pre><code>color: red;</code></pre>
+                </li>
+                <li>
+                    <strong>margin</strong> - Espaço externo de um elemento.
+                </li>
+                <li>
+                    <strong>padding</strong> - Espaço interno de um elemento.
+                </li>
+                <li>
+                    <strong>background-color</strong> - Cor de fundo.
+                </li>
+                <li>
+                    <strong>font-size</strong> - Tamanho da fonte.
+                </li>
+                <li>
+                    <strong>display</strong> - Define o tipo de exibição do elemento.
+                </li>
+                <li>
+                    <strong>border</strong> - Borda do elemento.
+                </li>
+                <li>
+                    <strong>width</strong> - Largura do elemento.
+                </li>
+                <li>
+                    <strong>height</strong> - Altura do elemento.
+                </li>
+                <li>
+                    <strong>text-align</strong> - Alinhamento do texto.
+                </li>
+            </ul>
+        </section>
+
+        <section id="js-placeholder">
+            <h2>JavaScript</h2>
+            <div class="loader"></div>
+            <p>Aguarde...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site desenvolvido por Yasmim Vieira, com fins educativos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                tabBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                contents.forEach(c => c.classList.remove("active"));
+                document.getElementById(btn.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
